@@ -60,7 +60,7 @@ public class SimpleInMemoryPriorityQueue implements JobQueue {
             return 0;
         }
     });
-    private final Map<String, JobHolder> idCache = new HashMap<>();
+    protected final Map<String, JobHolder> idCache = new HashMap<>();
 
     private final AtomicLong insertionOrderCounter = new AtomicLong(0);
     private final List<String> reusedList = new ArrayList<>();

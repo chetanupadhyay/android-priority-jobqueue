@@ -92,7 +92,7 @@ public class Params {
      * @return this
      */
     public Params persist() {
-        this.persistent = true;
+        this.persistent = false;//true;
         return this;
     }
 
@@ -172,7 +172,7 @@ public class Params {
      * @return this
      */
     public Params setPersistent(boolean persistent) {
-        this.persistent = persistent;
+        this.persistent = false; //persistent;
         return this;
     }
 

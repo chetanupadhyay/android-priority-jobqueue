@@ -54,7 +54,7 @@ abstract public class Job implements Serializable {
     protected Job(Params params) {
         this.id = UUID.randomUUID().toString();
         this.requiredNetworkType = params.requiredNetworkType;
-        this.persistent = params.isPersistent();
+        this.persistent = false; //params.isPersistent();
         this.groupId = params.getGroupId();
         this.priority = params.getPriority();
         this.delayInMs = Math.max(0, params.getDelayMs());
@@ -133,7 +133,7 @@ abstract public class Job implements Serializable {
         id = holder.id;
         groupId = holder.groupId;
         priority = holder.getPriority();
-        this.persistent = holder.persistent;
+        this.persistent = false;// holder.persistent;
         readonlyTags = holder.tags;
         requiredNetworkType = holder.requiredNetworkType;
         sealed = true; //  deserialized jobs are sealed
